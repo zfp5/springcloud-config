@@ -1,0 +1,16 @@
+server:
+  port: 9100
+spring:
+  application:
+    name: config_server
+  cloud:
+    config:
+      # 获取配置文件的分支，默认为 master
+      label: master
+      server:
+        git:
+          # git 仓库地址
+          uri: https://gitee.com/lyh-man/spring-cloud-config.git
+          # 配置文件搜索路径
+          search-paths:
+            - SpringCloudConfig
